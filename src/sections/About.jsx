@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
+import { technicalSkills } from "../constants";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -40,8 +41,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in building responsive and dynamic web using modern
-                technologies.like reactjs, nextjs, tailwindcss and more.
+                I build full-stack web apps and AI-powered backends with a
+                modern, performance-focused toolkit.
               </p>
             </div>
           </div>
@@ -83,17 +84,31 @@ const About = () => {
         </div>
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img
-              src="/assets/grid3.png"
-              alt="grid-3"
-              className="w-full sm:h-[266px] h-fit object-contain"
-            />
             <div>
-              <p className="grid-headtext">My Passion for coding</p>
+              <p className="grid-headtext">Technical Skills</p>
               <p className="grid-subtext">
-                I love solving real-world problems and building products that
-                make a difference.
+                A snapshot of the languages, frameworks and infrastructure I
+                work with day to day.
               </p>
+            </div>
+            <div className="flex flex-col gap-4 mt-1 max-h-[320px] overflow-y-auto pr-2">
+              {technicalSkills.map(({ category, skills }) => (
+                <div key={category} className="flex flex-col gap-2">
+                  <p className="text-white-600 text-sm font-medium font-generalsans uppercase tracking-wider">
+                    {category}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full border border-black-300 bg-black-300/60 px-3 py-1 text-xs sm:text-sm text-white-800 font-generalsans hover:border-white-600 hover:text-white transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

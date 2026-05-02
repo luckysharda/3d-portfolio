@@ -1,3 +1,83 @@
+export const technicalSkills = [
+  {
+    category: "Programming Languages",
+    skills: [
+      "Python",
+      "C++",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Golang",
+    ],
+  },
+  {
+    category: "Libraries & Tools",
+    skills: [
+      "Docker",
+      "Pydantic AI",
+      "LangChain",
+      "LangGraph",
+      "FastAPI",
+      "REST APIs",
+      "gRPC",
+      "GraphQL",
+      "Git",
+      "Expo",
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: ["Kafka", "AWS", "GCP", "Kubernetes", "CI/CD"],
+  },
+  {
+    category: "AI / GenAI",
+    skills: [
+      "LLM Integration",
+      "RAG",
+      "Harness Engineering",
+      "Self-Improving Agents",
+      "DSPy",
+      "Embeddings",
+    ],
+  },
+  {
+    category: "Databases",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Chroma",
+      "Pinecone",
+    ],
+  },
+  {
+    category: "Architecture",
+    skills: [
+      "System Design",
+      "Distributed Systems",
+      "Event-Driven Architecture",
+      "Microservices",
+      "DB Indexing",
+      "API Design",
+    ],
+  },
+  {
+    category: "Development",
+    skills: [
+      "Node.js",
+      "React.js",
+      "React Native",
+      "Next.js",
+      "MongoDB",
+      "SQL",
+      "Prisma",
+      "WebSockets",
+      "WebRTC",
+    ],
+  },
+];
+
 export const navLinks = [
   {
     id: 1,
