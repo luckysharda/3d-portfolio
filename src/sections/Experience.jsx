@@ -30,7 +30,17 @@ const Experience = () => {
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
               {workExperiences.map(
-                ({ id, name, pos, duration, title, icon, animation }) => (
+                ({
+                  id,
+                  name,
+                  pos,
+                  location,
+                  duration,
+                  title,
+                  bullets,
+                  icon,
+                  animation,
+                }) => (
                   <div
                     key={id}
                     className="work-content_container group"
@@ -49,11 +59,20 @@ const Experience = () => {
                     <div className="sm:p-5 px-2.5 py-5">
                       <p className="font-bold text-white-800">{name}</p>
                       <p className="mb-5 text-sm">
-                        {pos}--{duration}
+                        {[pos, location, duration].filter(Boolean).join(" — ")}
                       </p>
                       <p className="group-hover:text-white transition-all ease-in-out duration-500">
                         {title}
                       </p>
+                      {bullets && bullets.length > 0 && (
+                        <ul className="mt-3 list-disc list-outside pl-5 space-y-2 text-sm text-white-600 group-hover:text-white-800 transition-all ease-in-out duration-500">
+                          {bullets.map((point, i) => (
+                            <li key={i} className="leading-relaxed">
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 )

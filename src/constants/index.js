@@ -385,10 +385,18 @@ export const workExperiences = [
   {
     id: 3,
     name: "Zidio Development PVT. LTD",
-    pos: "Frontend Developer",
+    pos: "Software Developer",
+    location: "Bengaluru, Karnataka",
     duration: "2023 - 2024",
     title:
-      "Architected and developed a comprehensive LMS platform, resulting in a 30% increase in user engagement.",
+      "Drove end-to-end performance, reliability and developer-velocity wins across the nextGen-web platform.",
+    bullets: [
+      "Architected and led development of the nextGen-web platform using React/Next.js with SSR and code-splitting, reducing initial page load time by 45% and improving Lighthouse performance scores from 62 to 94.",
+      "Optimized backend APIs through Redis caching, query indexing, and lazy-loading strategies, decreasing average API response time by 55% and cutting server infrastructure costs by 30%.",
+      "Implemented CI/CD pipelines with automated unit and E2E testing (Jest, Playwright), increasing deployment frequency by 70% and reducing production defects by 40%.",
+      "Refactored legacy monolithic modules into a micro-frontend architecture, improving build time by 65% and boosting team development velocity by 40%.",
+      "Mentored a team of 5 engineers and established code-review and TypeScript standards, reducing post-release bug reports by 50% and improving code-maintainability scores by 35%.",
+    ],
     icon: "/assets/zidio.png",
     animation: "clapping",
   },
