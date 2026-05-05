@@ -366,7 +366,7 @@ export const workExperiences = [
     id: 1,
     name: "Fonix technologies",
     pos: "React Native Developer",
-    duration: "2025 - Present",
+    duration: "Sept 2024 - Present",
     title:
       "As a React Native Developer at Fonix Technologies, I played a key role in designing and developing a cross-platform educational mobile application aimed at enhancing learning experiences for students. I was responsible for building responsive user interfaces, integrating RESTful APIs, and optimizing app performance across both Android and iOS devices. The app included interactive lessons, progress tracking, push notifications, and offline capabilities to support learning anytime, anywhere. Collaborated closely with UI/UX designers, backend developers, and QA teams to ensure a seamless and engaging user experience.",
     icon: "/assets/clogo.png",
@@ -374,20 +374,10 @@ export const workExperiences = [
   },
   {
     id: 2,
-    name: "Dotspace technologies",
-    pos: "Frontend Developer",
-    duration: "2024 - 2025",
-    title:
-      "As a React Developer at Dotspace, I was responsible for developing an informative and responsive website that effectively communicated the company’s services and vision. Using modern React practices, I created dynamic components, implemented smooth navigation with React Router, and ensured optimal performance across devices. The project involved close collaboration with designers to bring visually engaging layouts to life, while also integrating third-party APIs and content management tools to streamline content updates. The end result was a fast, accessible, and user-friendly platform that enhanced the company’s online presence.",
-    icon: "/assets/dlogo.png",
-    animation: "victory",
-  },
-  {
-    id: 3,
     name: "Zidio Development PVT. LTD",
     pos: "Software Developer",
     location: "Bengaluru, Karnataka",
-    duration: "2023 - 2024",
+    duration: "Jan 2024 - July 2024",
     title:
       "Drove end-to-end performance, reliability and developer-velocity wins across the nextGen-web platform.",
     bullets: [
