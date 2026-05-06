@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
-import { technicalSkills } from "../constants";
+import { aboutSummary, technicalSkills } from "../constants";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -14,6 +14,27 @@ const About = () => {
   };
   return (
     <section className="c-space my-20" id="about">
+      <div className="mb-10">
+        <h3 className="head-text">About Me</h3>
+        <div className="mt-6 rounded-2xl border border-black-300 bg-black-200 p-6 sm:p-8">
+          <p className="text-white-600 text-sm font-medium uppercase tracking-[0.18em] font-generalsans">
+            {aboutSummary.headline}
+          </p>
+          <p className="mt-3 text-white-800 text-base sm:text-lg leading-relaxed font-generalsans">
+            {aboutSummary.body}
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {aboutSummary.highlights.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-black-300 bg-black-300/60 px-3 py-1 text-xs sm:text-sm text-white font-generalsans"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 md:grid-col-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">

@@ -1,3 +1,13 @@
+export const aboutSummary = {
+  headline: "Full-Stack Developer · AI Engineer",
+  body: "Full-Stack Developer with 2+ years building scalable applications using React, Next.js, Node.js, and TypeScript. Backend expertise in FastAPI, REST APIs, and GraphQL. Proficient in PostgreSQL, LangChain, LangGraph, and AWS — built production-grade RAG workflows, autonomous AI agents, multi-agent systems, and self-improving agents.",
+  highlights: [
+    "20% API latency reduction",
+    "70+ REST APIs across microservices",
+    "80%+ test coverage across enterprise services",
+  ],
+};
+
 export const technicalSkills = [
   {
     category: "Programming Languages",
@@ -364,11 +374,19 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: "Fonix technologies",
-    pos: "React Native Developer",
+    name: "Fonix Technologies",
+    pos: "Software Developer",
+    location: "Jaipur, Rajasthan",
     duration: "Sept 2024 - Present",
     title:
-      "As a React Native Developer at Fonix Technologies, I played a key role in designing and developing a cross-platform educational mobile application aimed at enhancing learning experiences for students. I was responsible for building responsive user interfaces, integrating RESTful APIs, and optimizing app performance across both Android and iOS devices. The app included interactive lessons, progress tracking, push notifications, and offline capabilities to support learning anytime, anywhere. Collaborated closely with UI/UX designers, backend developers, and QA teams to ensure a seamless and engaging user experience.",
+      "Architecting Vrah — an AI-powered platform that ships production-ready websites from a single prompt — and shipping fast, reliable React / React Native experiences end to end.",
+    bullets: [
+      "Architected and shipped Vrah, an AI-powered platform generating production-ready websites from a user prompt using Next.js 16 (App Router), React 19, and TypeScript (strict) — cut average page load time by ~45% via route-group code splitting, RSC streaming, and lazy-loaded feature modules.",
+      "Designed a centralized data layer with Redux Toolkit + RTK Query (auto-caching, tag-based invalidation, silent token reauth, FormData-aware base query) — eliminated ~60% of redundant API calls and reduced boilerplate fetch code by ~50% across 20+ feature modules.",
+      "Built end-to-end authentication (email/password signup, Google OAuth, OTP-based password reset, email verification, cookie-bound JWT with auto-refresh) — reduced auth-related support tickets by ~35% and lifted signup-to-active-user conversion by ~25%.",
+      "Engineered the AI-assisted PRD module (prompt-driven document generation, section-level inline editing, html2canvas + jsPDF export) — cut time-to-first-PRD from hours to under 3 minutes (~80% reduction) and lifted feature adoption by ~40%.",
+      "Developed a cross-platform Hospital Management App with React Native, enabling seamless access on both Android and iOS devices.",
+    ],
     icon: "/assets/clogo.png",
     animation: "salute",
   },
