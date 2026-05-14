@@ -13,7 +13,10 @@ const About = () => {
     }, 2000);
   };
   return (
-    <section className="c-space my-20" id="about">
+    <section
+      className="c-space my-20 scroll-mt-24 sm:scroll-mt-28"
+      id="about"
+    >
       <div className="mb-10">
         <h3 className="head-text">About Me</h3>
         <div className="mt-6 rounded-2xl border border-black-300 bg-black-200 p-6 sm:p-8">

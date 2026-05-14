@@ -43,7 +43,10 @@ const Contact = () => {
     }
   };
   return (
-    <div className="c-space my-20">
+    <section
+      id="contact"
+      className="c-space my-20 scroll-mt-24 sm:scroll-mt-28"
+    >
       <div className="relative min-h-screen flex items-center justify-center flex-col">
         <img
           src="/assets/terminal.png"
@@ -109,7 +112,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
