@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef, useState } from "react";
 import { Float, useGLTF, useTexture } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { easing } from "maath";
 
 const Cube = ({ ...props }) => {
   const { nodes } = useGLTF("models/cube.glb");
@@ -13,7 +15,15 @@ const Cube = ({ ...props }) => {
   const texture = useTexture("textures/cube.png");
 
   const cubeRef = useRef();
+  const groupRef = useRef();
   const [hovered, setHovered] = useState(false);
+
+  // Grow the cube while hovered for a tactile, interactive feel.
+  useFrame((_, delta) => {
+    if (!groupRef.current) return;
+    const scale = hovered ? 0.92 : 0.74;
+    easing.damp3(groupRef.current.scale, [scale, scale, scale], 0.25, delta);
+  });
 
   useGSAP(() => {
     gsap
@@ -34,6 +44,7 @@ const Cube = ({ ...props }) => {
   return (
     <Float floatIntensity={2}>
       <group
+        ref={groupRef}
         position={[9, -4, 0]}
         rotation={[2.6, 0.8, -1.8]}
         scale={0.74}
@@ -46,7 +57,15 @@ const Cube = ({ ...props }) => {
           receiveShadow
           geometry={nodes.Cube.geometry}
           material={nodes.Cube.material}
-          onPointerEnter={() => setHovered(true)}
+          onPointerEnter={(e) => {
+            e.stopPropagation();
+            setHovered(true);
+            document.body.style.cursor = "pointer";
+          }}
+          onPointerOut={() => {
+            setHovered(false);
+            document.body.style.cursor = "auto";
+          }}
         >
           <meshMatcapMaterial matcap={texture} toneMapped={false} />
         </mesh>

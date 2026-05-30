@@ -1,0 +1,8 @@
+# Local convenience: `docker compose up --build` -> http://localhost:8080
+services:
+  web:
+    build: .
+    image: 3d-portfolio:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped
