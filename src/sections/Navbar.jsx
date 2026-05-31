@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { navLinks } from "../constants";
+import ThemeToggle from "../components/ThemeToggle";
 
 const NavItems = ({ onNavigate }) => {
   return (
@@ -41,19 +42,23 @@ const Navbar = () => {
               height={36}
             />
           </a>
-          <button
-            onClick={toggleMenu}
-            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-            aria-label="Toggle Menu"
-          >
-            <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              alt="toggle"
-              className="w-6 h-6"
-            />
-          </button>
-          <nav className="sm:flex hidden">
+          <div className="flex items-center gap-3 sm:hidden">
+            <ThemeToggle />
+            <button
+              onClick={toggleMenu}
+              className="text-neutral-400 hover:text-white focus:outline-none flex"
+              aria-label="Toggle Menu"
+            >
+              <img
+                src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+                alt="toggle"
+                className="w-6 h-6"
+              />
+            </button>
+          </div>
+          <nav className="sm:flex hidden items-center gap-6">
             <NavItems />
+            <ThemeToggle />
           </nav>
         </div>
       </div>

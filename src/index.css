@@ -156,6 +156,77 @@ body {
   .social-icon {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
+
+  .theme-toggle {
+    @apply w-9 h-9 rounded-full flex justify-center items-center text-white-600 hover:text-white border border-black-300 bg-black-200 transition-colors active:scale-95;
+  }
+}
+
+/* ============================================================
+   Light theme
+   Activated by `html.light` (toggled from ThemeContext).
+   Dark is the default and lives in the rules above.
+   ============================================================ */
+html.light body {
+  background: #f4f5f7;
+  color: #1c1c21;
+}
+
+html.light header {
+  background: rgba(244, 245, 247, 0.9) !important;
+}
+
+html.light .nav-li {
+  color: #4b4f58;
+}
+html.light .nav-li:hover,
+html.light .nav-li_a:hover {
+  color: #010103;
+}
+
+html.light .text-gray_gradient,
+html.light .grid-headtext {
+  -webkit-text-fill-color: initial;
+  background: none;
+  color: #1c1c21;
+}
+
+html.light .grid-subtext {
+  color: #4b4f58;
+}
+
+html.light .grid-container {
+  background: #ffffff;
+  border-color: #e2e4ea;
+}
+
+html.light .btn {
+  background: #e7e9f0;
+  color: #1c1c21;
+}
+html.light .btn:hover {
+  background: #d9dce6;
+}
+
+html.light .nav-sidebar {
+  background: rgba(244, 245, 247, 0.95);
+}
+
+html.light .social-icon {
+  background: #e7e9f0;
+  border-color: #d9dce6;
+}
+html.light .social-icon img {
+  filter: invert(1);
+}
+
+html.light .theme-toggle {
+  background: #ffffff;
+  border-color: #d9dce6;
+  color: #4b4f58;
+}
+html.light .theme-toggle:hover {
+  color: #010103;
 }
 
 .waving-hand {
