@@ -37,7 +37,7 @@ export const technicalSkills = [
   },
   {
     category: "Cloud & DevOps",
-    skills: ["Kafka", "AWS", "GCP", "Kubernetes", "CI/CD"],
+    skills: ["Kafka", "AWS", "GCP", "Kubernetes", "CI/CD", "Cloudflare"],
   },
   {
     category: "AI / GenAI",

@@ -59,6 +59,26 @@ const Contact = () => {
             Whether you’re looking to build a new website, improve your existing
             platform, or bring a unique project to life, I’m here to help.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-6 text-white-600">
+            <div className="flex items-center gap-3">
+              <span className="text-white-500">📧 Email:</span>
+              <a
+                href="mailto:luckysharda1011@gmail.com"
+                className="text-white hover:text-blue-400 transition-colors"
+              >
+                luckysharda1011@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-white-500">📱 Phone:</span>
+              <a
+                href="tel:+919928210146"
+                className="text-white hover:text-blue-400 transition-colors"
+              >
+                +91 9928210146
+              </a>
+            </div>
+          </div>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
